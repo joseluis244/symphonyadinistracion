@@ -1,0 +1,58 @@
+#Home{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    $anchosidebar : 60px;
+    .HomeCont1{
+        background-color: coral;
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: $anchosidebar;
+        flex-direction: row;
+        display: flex;
+        .btn{
+            background-color: blueviolet;
+            flex: 1;
+            height: $anchosidebar;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+    }
+    .HomeCont2{
+        position: absolute;
+        top: 0px;
+        bottom: $anchosidebar;
+        left: 0px;
+        right: 0px;
+    }
+    @media screen and (min-width:500px) {
+        .HomeCont1{
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: auto;
+            width: $anchosidebar;
+            height: auto;
+            flex-direction: column;
+            .btn{
+                height: $anchosidebar;
+                flex: none;
+            }
+        }
+        .HomeCont2{
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: $anchosidebar;
+            right: 0px;
+        }
+    }
+}

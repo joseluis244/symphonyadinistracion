@@ -1,0 +1,29 @@
+#Login{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Contenedor{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .Login1{
+            flex: 1;
+        }
+        .Login2{
+            height: 60px;
+        }
+        .Login3{
+            height: 60px;
+        }
+        .Login4{
+            height: 60px;
+        }
+    }
+}
