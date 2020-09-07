@@ -63,5 +63,11 @@
     .Crear{
         background-color: rgb(119, 0, 255);
         @include Todopantalla();
+        .Contenedor{
+            box-sizing: border-box;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 }

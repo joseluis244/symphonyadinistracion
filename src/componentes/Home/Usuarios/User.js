@@ -3,7 +3,8 @@ class Usuario {
             this.DATOS= {
                 "NOMBRE": "",
                 "APELLIDO": "",
-                "TELEFONO": null,
+                "PREFIJO":0,
+                "TELEFONO": 0,
                 "CORREO": ""
             }
             this.LOGIN= {
@@ -19,6 +20,17 @@ class Usuario {
                 "ULTIMOACCESO": new Date()
             }
             this.LISTA = []
+    }
+    agregardatos(campo,valor){
+        this.DATOS[campo] = valor
+    }
+    json(){
+        return {
+            DATOS:this.DATOS,
+            LOGIN:this.LOGIN,
+            CONFIGURACION:this.CONFIGURACION,
+            LISTA:this.LISTA
+        }
     }
 }
 
