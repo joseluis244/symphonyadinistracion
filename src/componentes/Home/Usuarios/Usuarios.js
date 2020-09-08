@@ -201,7 +201,7 @@ let Crear = (props) => {
   }
   return (
     <div className="Crear">
-      <h3>Editar</h3>
+      <h3>Crear usuarios</h3>
       <div className="Contenedor">
         <div className="InputCont">
           <TextField

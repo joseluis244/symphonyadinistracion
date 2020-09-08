@@ -3,8 +3,8 @@ class Usuario {
             this.DATOS= {
                 "NOMBRE": "",
                 "APELLIDO": "",
-                "PREFIJO":0,
-                "TELEFONO": 0,
+                "PREFIJO":"",
+                "TELEFONO": "",
                 "CORREO": ""
             }
             this.LOGIN= {

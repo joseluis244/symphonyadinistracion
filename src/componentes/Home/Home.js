@@ -7,7 +7,7 @@ import Estudios from "./Estudios/Estudios";
 import Usuarios from "./Usuarios/Usuarios";
 
 function Home() {
-  const [Componente, setComponente] = useState(1);
+  const [Componente, setComponente] = useState(2);
   let Comp = [<Dashboard />,<Usuarios />,<Difucion />,<Estudios />];
   let cambiar = (e)=>{
     setComponente(e)
