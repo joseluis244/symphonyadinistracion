@@ -1,0 +1,73 @@
+#Difucion {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 60px;
+    right: 0px;
+
+    .Cabeza {
+        height: 40px;
+    }
+
+    .Componente {
+        height: calc(100% - 40px);
+
+        .Lista {
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+
+            .Contenedor {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+
+                .ListaDificion {
+                    padding-left: 10px;
+                    .ItemLista {
+                        display: flex;
+
+                        .ItemDatos {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            .ItemDatos1{
+                                font-weight: bold;
+                            }
+                        }
+                        .Itemicon {
+                            width: 55px;
+                        }
+                    }
+                }
+            }
+
+            .FabIcono {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+.Agregar{
+    .AgregarInps{
+        margin-bottom: 18px;
+        .InputItem{
+            box-sizing: border-box;
+            padding-left: 10px;
+            margin-bottom: 5px;
+            .InputCustom{
+                width: calc(100% - 20px);
+            }
+        }
+    }
+    .AgregarBtns{
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+}
+    }
+}

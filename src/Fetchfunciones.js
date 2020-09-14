@@ -26,6 +26,14 @@ function GetData(url){
         })
     })
 }
+function PostData(url,data){
+    return new Promise((Pres,Prej)=>{
+        axios.post(url,data)
+        .then((res)=>{
+            Pres(res.data)
+        })
+    })
+}
 function PutData(url,data){
     return new Promise((Pres,Prej)=>{
         axios.put(url,data)
@@ -42,5 +50,13 @@ function DelData(url,data){
         })
     })
 }
-let Envios = {PostFile,GetData,PutData,DelData}
+function DelData2(url,data){
+    return new Promise((Pres,Prej)=>{
+        axios.delete(`${url}/${data}`)
+        .then((res)=>{
+            Pres(res.data)
+        })
+    })
+}
+let Envios = {PostFile,GetData,PutData,DelData,DelData2,PostData}
 export default Envios

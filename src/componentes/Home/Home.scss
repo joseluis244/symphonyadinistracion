@@ -6,7 +6,7 @@
     right: 0px;
     $anchosidebar : 60px;
     .HomeCont1{
-        background-color: coral;
+        background-color: #014461;
         position: absolute;
         top: auto;
         bottom: 0px;
@@ -16,7 +16,6 @@
         flex-direction: row;
         display: flex;
         .btn{
-            background-color: blueviolet;
             flex: 1;
             height: $anchosidebar;
             display: flex;

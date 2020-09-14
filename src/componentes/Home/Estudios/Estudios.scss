@@ -1,0 +1,32 @@
+#Estudios{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    .Contenedor{
+        position: absolute;
+        top:63px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        overflow-y: auto;
+        .Lista{
+            box-sizing: border-box;
+            padding-left: 15px;
+            padding-right: 15px;
+            .ItemLista{
+                display: flex;
+                .ItemLista1{
+                    flex: 1;
+                    .ItemLista11{
+                        font-weight: bold;
+                    }
+                }
+                .ItemLista2{
+
+                }
+            }
+        }
+    }
+}
