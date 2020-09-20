@@ -2,10 +2,15 @@ import funcionesfetch from "../../Fetchfunciones"
 
 function leerkey(key){
     return new Promise((Pres,Prej)=>{
-        key.text()
-        .then((res)=>{
-            Pres(res)
-        })
+        let reader = new FileReader()
+        reader.onload = (res)=>{
+            Pres(res.target.result)
+        }
+        reader.readAsText(key)
+        //key.text()
+        //.then((res)=>{
+        //    Pres(res)
+        //})
     })
 }
 

@@ -11,11 +11,11 @@ import "./Estudios.scss";
 
 function Estudios() {
   const [Estudios, setEstudios] = useState({ listo: false, estudios: [] });
-  let reloadlist = ()=>{
+  let reloadlist = () => {
     setEstudios({ listo: false, estudios: [] });
     Funciones.cargarestudios().then((res) => {
-        setEstudios({ listo: true, estudios: res.data });
-      });
+      setEstudios({ listo: true, estudios: res.data });
+    });
   }
   let contenido;
   if (Estudios.listo) {
@@ -100,8 +100,10 @@ const ItemLista = (props) => {
   let EliminarEstudio = () => {
     clearTimeout(TimeOut);
     setBorrar(false);
-    Funciones.eliminarestudio(props.item);
-    props.reloadlist()
+    Funciones.eliminarestudio(props.item)
+    .then(()=>{
+      props.reloadlist()
+    })
   };
   let Btns = Borrar ? (
     <ConfDel
@@ -109,15 +111,18 @@ const ItemLista = (props) => {
       EliminarEstudio={EliminarEstudio}
     />
   ) : (
-    <PreDel onBorrar={Eliminar} />
-  );
+      <PreDel onBorrar={Eliminar} />
+    );
   return (
     <li className="ItemLista">
       <div className="ItemLista1">
-        <div className="ItemLista11">{`${props.item.NOMBRE} ${moment(
-          props.item.FECHA,
-          "YYYYMMDD"
-        ).format("DD/MM/YYYY")}`}</div>
+        <div className="ItemLista11">
+          <div className="ItemLista111">{props.item.NOMBRE}</div>
+          <div className="ItemLista112">{moment(
+            props.item.FECHA,
+            "YYYYMMDD"
+          ).format("DD/MM/YYYY")}</div>
+        </div>
         <div>{escribirmodalidad(props.item.SERIES[0].MODALIDAD)}</div>
       </div>
       <div className="ItemLista2">{Btns}</div>

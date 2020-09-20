@@ -2,9 +2,24 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import LoginComp from "./componentes/Login/Login";
 import funciones from "./funciones";
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 
 import Home from "./componentes/Home/Home"
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: "#014461",
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#c63d2d',
+    },
+  },
+});
 
 
 function App() {
@@ -32,9 +47,11 @@ function App() {
     }
   }
   return(
+    <ThemeProvider theme={theme}>
     <div className="App">
         {Componente}
     </div>
+    </ThemeProvider>
   )
 }
 

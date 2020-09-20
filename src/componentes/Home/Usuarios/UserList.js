@@ -1,7 +1,7 @@
 import Fetchfunciones from "../../../Fetchfunciones";
 function CargarLista(){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.GetData("/listausuarios")
+        Fetchfunciones.GetData("./listausuarios")
         .then((res)=>{
             Pres(res)
         })
@@ -12,7 +12,7 @@ function CargarLista(){
 }
 function updateuser(data){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.PutData('/actualizarusuario',data)
+        Fetchfunciones.PutData('./actualizarusuario',data)
         .then((res)=>{
             Pres(res)
         })
@@ -20,7 +20,7 @@ function updateuser(data){
 }
 function borrarusuario(data){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.DelData('/actualizarusuario',data)
+        Fetchfunciones.DelData('./actualizarusuario',data)
         .then((res)=>{
             Pres(res)
         })
@@ -42,7 +42,7 @@ function validardatos(datos){
 }
 function crearusuario(data){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.PutData('/crearusuario',data)
+        Fetchfunciones.PutData('./crearusuario',data)
         .then((res)=>{
             Pres(res)
         })

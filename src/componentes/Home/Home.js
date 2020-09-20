@@ -13,7 +13,7 @@ import Difu from "@material-ui/icons/Group";
 import Est from "@material-ui/icons/FilterList";
 
 function Home() {
-  const [Componente, setComponente] = useState(3);
+  const [Componente, setComponente] = useState(0);
   let Comp = [<Dashboard />,<Usuarios />,<Difucion />,<Estudios />];
   let cambiar = (e)=>{
     setComponente(e)

@@ -1,0 +1,56 @@
+#Dashboard {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    .toolbar {
+        display: flex;
+        box-sizing: border-box;
+        padding: 5px;
+        position: absolute;
+        top: 0px;
+        height: 40px;
+        left: 0px;
+        right: 0px;
+        *{
+            display: flex;
+            align-items: center;
+        }
+        .toolbar1{
+            font-weight: bold;
+            font-size: 30PX;
+            flex: 1;
+        }
+        .toolbar2{
+            width: auto;
+            height: 100%;
+        }
+        .toolbar2L{
+            width: 30px;
+            height: 30px;
+            border: solid 2px black;
+            border-top-color: white;
+            border-radius: 50%;
+            animation: infinite linear spin 1s;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+    }
+
+    .data {
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        overflow-y: auto;
+        .Rows{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        }
+    }
+}

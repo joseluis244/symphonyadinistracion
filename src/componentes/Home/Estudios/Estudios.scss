@@ -1,31 +1,44 @@
-#Estudios{
+#Estudios {
     position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    .Contenedor{
+
+    .Contenedor {
         position: absolute;
-        top:63px;
+        top: 63px;
         left: 0px;
         right: 0px;
         bottom: 0px;
         overflow-y: auto;
-        .Lista{
+
+        .Lista {
             box-sizing: border-box;
             padding-left: 15px;
             padding-right: 15px;
-            .ItemLista{
+
+            .ItemLista {
                 display: flex;
-                .ItemLista1{
+
+                .ItemLista1 {
                     flex: 1;
-                    .ItemLista11{
+
+                    .ItemLista11 {
                         font-weight: bold;
+                        display: flex;
+
+                        .ItemLista111 {
+                            flex: 1;
+                        }
+
+                        .ItemLista112 {
+                            flex: 1;
+                        }
                     }
                 }
-                .ItemLista2{
 
-                }
+                .ItemLista2 {}
             }
         }
     }

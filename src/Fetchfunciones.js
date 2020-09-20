@@ -15,9 +15,12 @@ function PostFile(url,data){
         })
     })
 }
-function GetData(url){
+function GetData(url,opt){
+    if(opt===undefined){
+        opt={}
+    }
     return new Promise((Pres,Prej)=>{
-        axios.get(url)
+        axios.get(`${url}`,opt)
         .then((res)=>{
             Pres(res.data)
         })

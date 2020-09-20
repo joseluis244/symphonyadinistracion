@@ -1,7 +1,7 @@
 import Fetchfunciones from "../../../Fetchfunciones"
 function cargardifucion(){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.GetData("/Difucion")
+        Fetchfunciones.GetData("./Difucion")
         .then((res)=>{
             Pres({err:false,data:res})
         })
@@ -9,7 +9,7 @@ function cargardifucion(){
 }
 function ActualizarDifucion(difucion){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.PutData("/Difucion",difucion)
+        Fetchfunciones.PutData("./Difucion",difucion)
         .then((res)=>{
             Pres(res)
         })
@@ -46,7 +46,7 @@ function validardatos(obj){
 function AgregarDifucion(difucion){
     return new Promise((Pres,Prej)=>{
         if(validardatos(difucion)){
-            Fetchfunciones.PostData("/Difucion",difucion)
+            Fetchfunciones.PostData("./Difucion",difucion)
             .then((res)=>{
                 Pres({err:false,data:res})
             })
@@ -57,7 +57,7 @@ function AgregarDifucion(difucion){
 }
 function BorrarDifucion(difucion){
     return new Promise((Pres,Prej)=>{
-        Fetchfunciones.DelData2("/Difucion",difucion._id)
+        Fetchfunciones.DelData2("./Difucion",difucion._id)
         .then((res)=>{
             Pres(res)
         })
